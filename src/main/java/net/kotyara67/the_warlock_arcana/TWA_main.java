@@ -1,6 +1,7 @@
-package net.kotyara67.TWA_mod;
+package net.kotyara67.the_warlock_arcana;
 
 import com.mojang.logging.LogUtils;
+import net.kotyara67.the_warlock_arcana.item.TWA_items;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,9 @@ public class TWA_main
     public TWA_main()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //Register mod items
+        TWA_items.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
