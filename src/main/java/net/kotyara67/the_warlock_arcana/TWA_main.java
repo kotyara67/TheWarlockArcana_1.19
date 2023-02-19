@@ -1,8 +1,10 @@
 package net.kotyara67.the_warlock_arcana;
 
 import com.mojang.logging.LogUtils;
+import net.kotyara67.the_warlock_arcana.block.TWA_blocks;
 import net.kotyara67.the_warlock_arcana.item.TWA_items;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.monster.Ghast;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,6 +31,9 @@ public class TWA_main
 
         //Register mod items
         TWA_items.register(modEventBus);
+
+        //Register mod blocks
+        TWA_blocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

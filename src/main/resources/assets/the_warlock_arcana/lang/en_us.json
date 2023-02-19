@@ -1,3 +1,9 @@
 {
-  "item.the_warlock_arcana.empty_spell_scroll": "Empty spell scroll"
+  "item.the_warlock_arcana.empty_spell_scroll": "Empty spell scroll",
+  "item.the_warlock_arcana.fireball_spell_scroll": "Fireball spell scroll",
+
+  "block.the_warlock_arcana.cryolite_block": "Block of cryolite",
+
+  "itemGroup.TWA_items_tab": "The Warlock Arcana items",
+  "ItemGroup.TWA_blocks_tab": "The Warlock Arcana blocks"
 }
