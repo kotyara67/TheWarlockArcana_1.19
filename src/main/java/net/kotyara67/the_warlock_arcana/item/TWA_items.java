@@ -3,6 +3,7 @@ package net.kotyara67.the_warlock_arcana.item;
 import net.kotyara67.the_warlock_arcana.TWA_main;
 import net.kotyara67.the_warlock_arcana.item.customs.FangScrollItem;
 import net.kotyara67.the_warlock_arcana.item.customs.FireballScrollItem;
+import net.kotyara67.the_warlock_arcana.item.customs.SpectralRing;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,6 +23,9 @@ public class TWA_items {
 
     public static final RegistryObject<Item> FANG_SPELL_SCROLL = ITEMS.register("fang_spell_scroll",
             () -> new FangScrollItem(new Item.Properties().tab(TWA_creativeModTabs.Tabs.TWA_items_tab).stacksTo(1)));
+
+    public static final RegistryObject<Item> SPECTRAL_RING = ITEMS.register("spectral_ring",
+            () -> new SpectralRing(new Item.Properties().tab(TWA_creativeModTabs.Tabs.TWA_items_tab).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
