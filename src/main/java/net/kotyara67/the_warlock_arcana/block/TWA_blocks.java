@@ -1,6 +1,7 @@
 package net.kotyara67.the_warlock_arcana.block;
 
 import net.kotyara67.the_warlock_arcana.TWA_main;
+import net.kotyara67.the_warlock_arcana.block.custom.DamnumBlock;
 import net.kotyara67.the_warlock_arcana.item.TWA_creativeModTabs;
 import net.kotyara67.the_warlock_arcana.item.TWA_items;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -24,12 +25,12 @@ public class TWA_blocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TWA_main.MOD_ID);
 
 
-    /////////////////BLOCKS
+    ///////////////////BLOCKS
     public static final RegistryObject<Block> CRYOLITE_BLOCK = registerBlock("cryolite_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), TWA_creativeModTabs.Tabs.TWA_blocks_tab);
     public static final RegistryObject<Block> CRYOLITE_ORE = registerBlock("cryolite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(5,9)), TWA_creativeModTabs.Tabs.TWA_blocks_tab);
     public static final RegistryObject<Block> DEEPSLATE_CRYOLITE_ORE = registerBlock("deepslate_cryolite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(5,9)), TWA_creativeModTabs.Tabs.TWA_blocks_tab);
-
-
+    ///////////////////CUSTOM BLOCKS
+    public static final RegistryObject<Block> DAMNUM_BLOCK = registerBlock("damnum_block", () -> new DamnumBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), TWA_creativeModTabs.Tabs.TWA_blocks_tab);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
