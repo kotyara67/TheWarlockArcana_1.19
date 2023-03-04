@@ -1,9 +1,9 @@
 package net.kotyara67.the_warlock_arcana.event;
 
 import net.kotyara67.the_warlock_arcana.TWA_main;
+import net.kotyara67.the_warlock_arcana.networking.ModNetworking;
+import net.kotyara67.the_warlock_arcana.networking.packet.ExampleC2SPacket;
 import net.kotyara67.the_warlock_arcana.util.KeyBinding;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -17,8 +17,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event){
             if(KeyBinding.ELEMENT_SLOT1.consumeClick()){
-                assert Minecraft.getInstance().player != null;
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal(":O"));
+                ModNetworking.sendToServer(new ExampleC2SPacket());
             }
         }
 
